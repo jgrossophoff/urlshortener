@@ -138,7 +138,6 @@ func (u *URLs) renderUI(w http.ResponseWriter, r *http.Request) {
 				let input = document.getElementById("url-input")
 
 				input.focus();
-				input.value = "https://";
 
 				form.addEventListener("submit", evt => {
 					evt.stopPropagation()
