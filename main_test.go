@@ -44,10 +44,3 @@ func TestHTTP(t *testing.T) {
 		}
 	}
 }
-
-func _nilableString(s string) *string {
-	if s == "" {
-		return nil
-	}
-	return &s
-}
