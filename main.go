@@ -27,10 +27,14 @@ func main() {
 	flag.StringVar(&listenAddr, "l", ":6868", "Listen address")
 	flag.Parse()
 
-	u := &URLs{urls: make(map[int]string)}
+	u := NewURLs()
 
 	fmt.Printf("listening on %s\n", listenAddr)
 	http.ListenAndServe(listenAddr, u)
+}
+
+func NewURLs() *URLs {
+	return &URLs{urls: make(map[int]string)}
 }
 
 func (u *URLs) ServeHTTP(w http.ResponseWriter, r *http.Request) {
