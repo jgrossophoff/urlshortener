@@ -1,6 +1,10 @@
+workspace:
+  base: /go
+  path: src/github.com/jgrossophoff/urlshortener
+
 pipeline:
   build:
-    image: golang:1.10
+	  image: golang:latest
     commands:
       - go get
       - go build
